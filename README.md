@@ -23,8 +23,9 @@ npm install
 ## Configuration
 
 - Put your wallets in JSON format in the `wallets` folder
-- Copy `src/wallets.example.ts` to `src/wallets.ts`
-- Edit `src/wallets.ts` and add the filenames and passwords of your wallets
+- Run `npm run generate-env` to generate your environmment file
+- For every wallet in there, provide the associated password
+- File up the api address
 
 ## Run
 
@@ -32,12 +33,10 @@ npm install
 npm run start
 ```
 
-## Crontab
-
-Run it once per day.
+## Docker
 
 ```
-0 0 * * * cd /path/to/mvx-xportal-dailytask && npm run start
+docker compose up -d
 ```
 
 ## Claim XP from a browser

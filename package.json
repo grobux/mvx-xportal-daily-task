@@ -1,17 +1,25 @@
 {
   "name": "mvx-xportal-dailytask",
   "private": true,
-  "version": "1.0.0",
+  "version": "2.0.0",
   "author": "Bubu",
+  "contributors": [
+    "elpulpo0"
+  ],
   "dependencies": {
-    "@multiversx/sdk-core": "^13.17.2",
+    "@multiversx/sdk-core": "^14.2.4",
+    "@multiversx/sdk-native-auth-client": "^1.0.9",
     "@multiversx/sdk-network-providers": "^2.9.3",
     "@multiversx/sdk-wallet": "^4.6.0",
+    "axios": "^1.10.0",
+    "dotenv": "^17.0.1",
+    "moment-timezone": "^0.6.0",
     "tslog": "^4.9.3"
   },
   "scripts": {
     "start": "tsx src/daily-tasks.ts",
-    "build": "tsc -p ."
+    "build": "tsc -p .",
+    "generate-env": "tsx scripts/generate-env.ts"
   },
   "devDependencies": {
     "tsx": "^4.20.3",

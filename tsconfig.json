@@ -5,11 +5,11 @@
         "lib": ["es6"],
         "declaration": true,
         "outDir": "build",
-        "rootDir": "src",
+        "rootDir": ".",
         "strict": true,
         "resolveJsonModule": true,
         "esModuleInterop": true
     },
-    "include": ["src/**/*.ts"],
+    "include": ["src/**/*.ts", "scripts/generate-env.ts"],
     "exclude": ["node_modules", "**/*.spec.ts"]
 }

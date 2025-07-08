@@ -1,0 +1,19 @@
+version: "3.9"
+
+services:
+  mvx-xportal-dailytask:
+    build: .
+    container_name: mvx-xportal-dailytask
+    restart: always
+    volumes:
+      - ./wallets:/app/wallets
+      - logs-data:/app/logs
+      - /etc/localtime:/etc/localtime:ro
+    env_file:
+      - .env
+    environment:
+      - IN_DOCKER=true
+      - TZ=Europe/Paris
+
+volumes:
+  logs-data:
